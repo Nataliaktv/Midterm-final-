@@ -1,0 +1,6 @@
+define Cons b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|y|z ;
+define Con b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|z ;
+define V [ a | e | i | o | u ];
+read regex [ {realize} | {hope} | {hop} | {face} | {flee} | {see} | {die} | {dye} | {dream}| {verify}| {extract}| {purify}| {convert}| {clone}] [ %+Prog:{ing} | %+Past:{ed} | %+Agentive:{er} | %+Bare: 0] .o. [y -> i || Cons _ {ed}|{er} .#. ,,  {ie} -> y || _ [{ing} | {er}]  .#. ,, p -> pp || V _ “^” [ {ed} | {ing} | {er} ].#.] .o. [ e -> 0 || Con _  {ing} ]  .o. [e -> 0 || Cons _ [{ed} | {er} ]  ] .o. [ e -> 0 || V _ [ {ed} | {er} ]  .o. [{seed}->{saw}|| .#. _ .#.] .o. [{fleed}->{fled}|| .#. _ .#.]];
+turn stack
+compose net
